@@ -10,6 +10,7 @@
 		A97A27E61EF576D300559455 /* AmazingCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97A27DC1EF576D300559455 /* AmazingCache.framework */; };
 		A97A27EB1EF576D300559455 /* AmazingCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A27EA1EF576D300559455 /* AmazingCacheTests.swift */; };
 		A97A27ED1EF576D300559455 /* AmazingCache.h in Headers */ = {isa = PBXBuildFile; fileRef = A97A27DF1EF576D300559455 /* AmazingCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A97A27F71EF5795B00559455 /* AmazingCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A27F61EF5795B00559455 /* AmazingCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		A97A27E51EF576D300559455 /* AmazingCacheTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmazingCacheTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97A27EA1EF576D300559455 /* AmazingCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmazingCacheTests.swift; sourceTree = "<group>"; };
 		A97A27EC1EF576D300559455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A97A27F61EF5795B00559455 /* AmazingCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmazingCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				A97A27DF1EF576D300559455 /* AmazingCache.h */,
 				A97A27E01EF576D300559455 /* Info.plist */,
+				A97A27F61EF5795B00559455 /* AmazingCache.swift */,
 			);
 			path = AmazingCache;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 				TargetAttributes = {
 					A97A27DB1EF576D300559455 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 					};
 					A97A27E41EF576D300559455 = {
 						CreatedOnToolsVersion = 9.0;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A97A27F71EF5795B00559455 /* AmazingCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +268,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -315,7 +320,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -328,6 +333,7 @@
 		A97A27F11EF576D300559455 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -339,6 +345,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.brbs.AmazingCache;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -347,6 +354,7 @@
 		A97A27F21EF576D300559455 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -366,6 +374,7 @@
 		A97A27F41EF576D300559455 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = AmazingCacheTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brbs.AmazingCacheTests;
@@ -378,6 +387,7 @@
 		A97A27F51EF576D300559455 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = AmazingCacheTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brbs.AmazingCacheTests;
