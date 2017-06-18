@@ -13,6 +13,8 @@
 		A91EF7461EF6A5FB00977DE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A91EF7451EF6A5FB00977DE5 /* Assets.xcassets */; };
 		A91EF7491EF6A5FB00977DE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A91EF7471EF6A5FB00977DE5 /* LaunchScreen.storyboard */; };
 		A91EF7541EF6A5FB00977DE5 /* AmazingCacheSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91EF7531EF6A5FB00977DE5 /* AmazingCacheSampleTests.swift */; };
+		A91EF7671EF6AA0800977DE5 /* AmazingCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91EF7641EF6A8F400977DE5 /* AmazingCache.framework */; };
+		A91EF7681EF6AA0800977DE5 /* AmazingCache.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A91EF7641EF6A8F400977DE5 /* AmazingCache.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,7 +25,42 @@
 			remoteGlobalIDString = A91EF73A1EF6A5FB00977DE5;
 			remoteInfo = AmazingCacheSample;
 		};
+		A91EF7631EF6A8F400977DE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A91EF75E1EF6A8F400977DE5 /* AmazingCache.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A97A27DC1EF576D300559455;
+			remoteInfo = AmazingCache;
+		};
+		A91EF7651EF6A8F400977DE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A91EF75E1EF6A8F400977DE5 /* AmazingCache.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A97A27E51EF576D300559455;
+			remoteInfo = AmazingCacheTests;
+		};
+		A91EF7691EF6AA0800977DE5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A91EF75E1EF6A8F400977DE5 /* AmazingCache.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A97A27DB1EF576D300559455;
+			remoteInfo = AmazingCache;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A91EF76B1EF6AA0800977DE5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A91EF7681EF6AA0800977DE5 /* AmazingCache.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A91EF73B1EF6A5FB00977DE5 /* AmazingCacheSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmazingCacheSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +73,7 @@
 		A91EF74F1EF6A5FB00977DE5 /* AmazingCacheSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmazingCacheSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A91EF7531EF6A5FB00977DE5 /* AmazingCacheSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmazingCacheSampleTests.swift; sourceTree = "<group>"; };
 		A91EF7551EF6A5FB00977DE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A91EF75E1EF6A8F400977DE5 /* AmazingCache.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AmazingCache.xcodeproj; path = ../AmazingCache.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A91EF7671EF6AA0800977DE5 /* AmazingCache.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +98,7 @@
 		A91EF7321EF6A5FA00977DE5 = {
 			isa = PBXGroup;
 			children = (
+				A91EF75E1EF6A8F400977DE5 /* AmazingCache.xcodeproj */,
 				A91EF73D1EF6A5FB00977DE5 /* AmazingCacheSample */,
 				A91EF7521EF6A5FB00977DE5 /* AmazingCacheSampleTests */,
 				A91EF73C1EF6A5FB00977DE5 /* Products */,
@@ -96,6 +136,15 @@
 			path = AmazingCacheSampleTests;
 			sourceTree = "<group>";
 		};
+		A91EF75F1EF6A8F400977DE5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A91EF7641EF6A8F400977DE5 /* AmazingCache.framework */,
+				A91EF7661EF6A8F400977DE5 /* AmazingCacheTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,10 +155,12 @@
 				A91EF7371EF6A5FB00977DE5 /* Sources */,
 				A91EF7381EF6A5FB00977DE5 /* Frameworks */,
 				A91EF7391EF6A5FB00977DE5 /* Resources */,
+				A91EF76B1EF6AA0800977DE5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A91EF76A1EF6AA0800977DE5 /* PBXTargetDependency */,
 			);
 			name = AmazingCacheSample;
 			productName = AmazingCacheSample;
@@ -164,6 +215,12 @@
 			mainGroup = A91EF7321EF6A5FA00977DE5;
 			productRefGroup = A91EF73C1EF6A5FB00977DE5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = A91EF75F1EF6A8F400977DE5 /* Products */;
+					ProjectRef = A91EF75E1EF6A8F400977DE5 /* AmazingCache.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A91EF73A1EF6A5FB00977DE5 /* AmazingCacheSample */,
@@ -171,6 +228,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		A91EF7641EF6A8F400977DE5 /* AmazingCache.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = AmazingCache.framework;
+			remoteRef = A91EF7631EF6A8F400977DE5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		A91EF7661EF6A8F400977DE5 /* AmazingCacheTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AmazingCacheTests.xctest;
+			remoteRef = A91EF7651EF6A8F400977DE5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A91EF7391EF6A5FB00977DE5 /* Resources */ = {
@@ -217,6 +291,11 @@
 			isa = PBXTargetDependency;
 			target = A91EF73A1EF6A5FB00977DE5 /* AmazingCacheSample */;
 			targetProxy = A91EF7501EF6A5FB00977DE5 /* PBXContainerItemProxy */;
+		};
+		A91EF76A1EF6AA0800977DE5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AmazingCache;
+			targetProxy = A91EF7691EF6AA0800977DE5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -286,7 +365,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -335,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -346,6 +425,7 @@
 		A91EF7591EF6A5FB00977DE5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AmazingCacheSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -359,6 +439,7 @@
 		A91EF75A1EF6A5FB00977DE5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AmazingCacheSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -418,6 +499,7 @@
 				A91EF75A1EF6A5FB00977DE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A91EF75B1EF6A5FB00977DE5 /* Build configuration list for PBXNativeTarget "AmazingCacheSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +508,7 @@
 				A91EF75D1EF6A5FB00977DE5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
