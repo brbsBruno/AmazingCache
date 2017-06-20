@@ -11,18 +11,35 @@ import AmazingCache
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
-        let _ = AmazingCache().checkAccess()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(showDetailViewController(_:)))
+        imageView.addGestureRecognizer(tapGesture)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let urlString = "https://i.imgur.com/pcENhyi.jpg"
+        let url = URL(string: urlString)!
+        
+        AmazingCache().loadData(url: url) { (result) in
+            switch result {
+                
+            case .success(let data):
+                DispatchQueue.main.async {
+                    self.imageView.image = UIImage(data: data)
+                }
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
-
-
+    
+    @objc func showDetailViewController(_ sender: UITapGestureRecognizer) {
+        performSegue(withIdentifier: "showDetail", sender: self)
+    }
 }
 

@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A922548D1EF88D2B00F26484 /* MemoryCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A922548C1EF88D2B00F26484 /* MemoryCacheTests.swift */; };
 		A97A27E61EF576D300559455 /* AmazingCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97A27DC1EF576D300559455 /* AmazingCache.framework */; };
 		A97A27EB1EF576D300559455 /* AmazingCacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A27EA1EF576D300559455 /* AmazingCacheTests.swift */; };
 		A97A27ED1EF576D300559455 /* AmazingCache.h in Headers */ = {isa = PBXBuildFile; fileRef = A97A27DF1EF576D300559455 /* AmazingCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A97A27F71EF5795B00559455 /* AmazingCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A27F61EF5795B00559455 /* AmazingCache.swift */; };
+		A990913C1EF7115F000B39D5 /* MemoryCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990913B1EF7115F000B39D5 /* MemoryCache.swift */; };
+		A990913F1EF72753000B39D5 /* BasicRestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A990913E1EF72753000B39D5 /* BasicRestClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -24,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A922548C1EF88D2B00F26484 /* MemoryCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCacheTests.swift; sourceTree = "<group>"; };
 		A97A27DC1EF576D300559455 /* AmazingCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AmazingCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97A27DF1EF576D300559455 /* AmazingCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AmazingCache.h; sourceTree = "<group>"; };
 		A97A27E01EF576D300559455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,6 +35,8 @@
 		A97A27EA1EF576D300559455 /* AmazingCacheTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmazingCacheTests.swift; sourceTree = "<group>"; };
 		A97A27EC1EF576D300559455 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A97A27F61EF5795B00559455 /* AmazingCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmazingCache.swift; sourceTree = "<group>"; };
+		A990913B1EF7115F000B39D5 /* MemoryCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryCache.swift; sourceTree = "<group>"; };
+		A990913E1EF72753000B39D5 /* BasicRestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicRestClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A922548B1EF88D0F00F26484 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				A922548C1EF88D2B00F26484 /* MemoryCacheTests.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 		A97A27D21EF576D300559455 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +87,8 @@
 		A97A27DE1EF576D300559455 /* AmazingCache */ = {
 			isa = PBXGroup;
 			children = (
+				A990913D1EF726D9000B39D5 /* Storage */,
+				A990913A1EF6C84C000B39D5 /* Network */,
 				A97A27DF1EF576D300559455 /* AmazingCache.h */,
 				A97A27E01EF576D300559455 /* Info.plist */,
 				A97A27F61EF5795B00559455 /* AmazingCache.swift */,
@@ -83,10 +99,27 @@
 		A97A27E91EF576D300559455 /* AmazingCacheTests */ = {
 			isa = PBXGroup;
 			children = (
+				A922548B1EF88D0F00F26484 /* Storage */,
 				A97A27EA1EF576D300559455 /* AmazingCacheTests.swift */,
 				A97A27EC1EF576D300559455 /* Info.plist */,
 			);
 			path = AmazingCacheTests;
+			sourceTree = "<group>";
+		};
+		A990913A1EF6C84C000B39D5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A990913E1EF72753000B39D5 /* BasicRestClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A990913D1EF726D9000B39D5 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				A990913B1EF7115F000B39D5 /* MemoryCache.swift */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,6 +232,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A97A27F71EF5795B00559455 /* AmazingCache.swift in Sources */,
+				A990913F1EF72753000B39D5 /* BasicRestClient.swift in Sources */,
+				A990913C1EF7115F000B39D5 /* MemoryCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A97A27EB1EF576D300559455 /* AmazingCacheTests.swift in Sources */,
+				A922548D1EF88D2B00F26484 /* MemoryCacheTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +310,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -324,6 +361,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -416,6 +454,7 @@
 				A97A27F21EF576D300559455 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A97A27F31EF576D300559455 /* Build configuration list for PBXNativeTarget "AmazingCacheTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +463,7 @@
 				A97A27F51EF576D300559455 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
