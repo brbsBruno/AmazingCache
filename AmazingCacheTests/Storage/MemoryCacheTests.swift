@@ -42,4 +42,44 @@ class MemoryCacheTests: XCTestCase {
             XCTAssertTrue(firstInstance === secondInstance)
         }
     }
+    
+    func testCapacityOverflow() {
+        let instance = MemoryCache.shared
+        let maxCapacity = 4
+        instance.capacity = maxCapacity
+        
+        for index in 1...5 {
+            instance.setData("\(index)".data(using: .utf8)!, forKey: "\(index)")
+        }
+        
+        XCTAssertNil(instance.object(forKey: "\(1)"))
+    }
+    
+    func testCapacityChange() {
+        let instance = MemoryCache.shared
+        let maxCapacity = 5
+        instance.capacity = maxCapacity
+        
+        for index in 1...5 {
+            instance.setData("\(index)".data(using: .utf8)!, forKey: "\(index)")
+        }
+        
+        XCTAssertNotNil(instance.object(forKey: "\(1)"))
+        instance.capacity = 4
+        
+        XCTAssertNil(instance.object(forKey: "\(2)"))
+    }
+    
+    func testCacheOutOfMemory() {
+        let instance = MemoryCache.shared
+        
+        for index in 1...5 {
+            instance.setData("\(index)".data(using: .utf8)!, forKey: "\(index)")
+        }
+        
+        NotificationCenter.default.post(name: .UIApplicationDidReceiveMemoryWarning, object: nil)
+        
+        XCTAssertNil(instance.object(forKey: "\(1)"))
+        XCTAssertNotNil(instance.object(forKey: "\(2)"))
+    }
 }

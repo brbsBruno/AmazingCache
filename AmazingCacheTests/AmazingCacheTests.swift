@@ -56,4 +56,32 @@ class AmazingCacheTests: XCTestCase {
         }
         waitForExpectations(timeout: 10, handler: nil)
     }
+    
+    func testLoadSameDataMultipleTimes() {
+        let cacheSameData = expectation(description: "Request same data multiple times")
+        
+        let urlString = "http://i.imgur.com/pcENhyi.jpg"
+        let testingDataURL = URL(string: urlString)!
+        
+        var myData = [Data]()
+        
+        for index in 1...10 {
+            amazingCache.loadData(url: testingDataURL) { (result) in
+                switch result {
+                case .success(let data):
+                    myData.append(data)
+                case .failure( _):
+                    break
+                }
+                
+                if index == 10 {
+                    cacheSameData.fulfill()
+                }
+            }
+        }
+        
+        waitForExpectations(timeout: 10) { (error) in
+            XCTAssert(myData.count == 10)
+        }
+    }
 }

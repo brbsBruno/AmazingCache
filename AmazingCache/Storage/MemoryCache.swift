@@ -14,7 +14,15 @@ final class MemoryCache {
     
     // MARK: - Properties
     
-    let countLimit: Int = 0
+    var capacity: Int = 0 {
+        didSet {
+            if capacity != 0 {
+                while storageIndex.count > capacity {
+                    purgeData()
+                }
+            }
+        }
+    }
     
     // MARK: Variables
     
@@ -32,7 +40,7 @@ final class MemoryCache {
     // Mark: -
     
     func setData(_ data: Data, forKey key: String) {
-        if countLimit == 0 || storageIndex.count < countLimit {
+        if capacity == 0 || storageIndex.count < capacity {
             storage[key] = data
             storageIndex.add(key)
             
@@ -51,7 +59,6 @@ final class MemoryCache {
                 return data
             }
         }
-        
         return nil
     }
     

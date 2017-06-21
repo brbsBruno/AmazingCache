@@ -66,6 +66,23 @@
 			path = Storage;
 			sourceTree = "<group>";
 		};
+		A931672A1EF9FBFF00549C3D /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				A97A27DF1EF576D300559455 /* AmazingCache.h */,
+				A97A27E01EF576D300559455 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		A931672B1EF9FCEC00549C3D /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				A97A27EC1EF576D300559455 /* Info.plist */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
 		A97A27D21EF576D300559455 = {
 			isa = PBXGroup;
 			children = (
@@ -87,10 +104,9 @@
 		A97A27DE1EF576D300559455 /* AmazingCache */ = {
 			isa = PBXGroup;
 			children = (
+				A931672A1EF9FBFF00549C3D /* Support */,
 				A990913D1EF726D9000B39D5 /* Storage */,
 				A990913A1EF6C84C000B39D5 /* Network */,
-				A97A27DF1EF576D300559455 /* AmazingCache.h */,
-				A97A27E01EF576D300559455 /* Info.plist */,
 				A97A27F61EF5795B00559455 /* AmazingCache.swift */,
 			);
 			path = AmazingCache;
@@ -99,9 +115,9 @@
 		A97A27E91EF576D300559455 /* AmazingCacheTests */ = {
 			isa = PBXGroup;
 			children = (
+				A931672B1EF9FCEC00549C3D /* Support */,
 				A922548B1EF88D0F00F26484 /* Storage */,
 				A97A27EA1EF576D300559455 /* AmazingCacheTests.swift */,
-				A97A27EC1EF576D300559455 /* Info.plist */,
 			);
 			path = AmazingCacheTests;
 			sourceTree = "<group>";
@@ -304,6 +320,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -357,6 +374,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -377,7 +395,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AmazingCache/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AmazingCache/Support/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brbs.AmazingCache;
@@ -398,7 +416,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = AmazingCache/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AmazingCache/Support/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brbs.AmazingCache;
@@ -413,7 +431,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = AmazingCacheTests/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AmazingCacheTests/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brbs.AmazingCacheTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -426,7 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				INFOPLIST_FILE = AmazingCacheTests/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/AmazingCacheTests/Support/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brbs.AmazingCacheTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
