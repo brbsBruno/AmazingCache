@@ -28,9 +28,9 @@ class ViewController: UIViewController {
             switch result {
                 
             case .success(let data):
-                DispatchQueue.main.async {
+                
                     self.imageView.image = UIImage(data: data)
-                }
+                
                 
             case .failure(let error):
                 print(error.localizedDescription)

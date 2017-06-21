@@ -16,7 +16,9 @@ final class BasicRestClient: NSObject {
     func get<A>(_ resource: Resource<A>, completion: @escaping (A?, Error?) -> ()) {
         URLSession.shared.dataTask(with: resource.url) { data, _, error in
             let result = data.flatMap(resource.decode)
-            completion(result, error)
+            DispatchQueue.main.async {
+                completion(result, error)
+            }
             }.resume()
     }
 }
