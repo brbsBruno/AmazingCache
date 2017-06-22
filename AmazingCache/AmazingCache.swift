@@ -49,6 +49,10 @@ public class AmazingCache: NSObject {
         }
     }
     
+    public func refreshData() {
+        cache.removeAll()
+    }
+    
     // MARK: Private functions
     
     private func memoryFetch(key: String) -> Data? {

@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		A91EF73F1EF6A5FB00977DE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91EF73E1EF6A5FB00977DE5 /* AppDelegate.swift */; };
-		A91EF7411EF6A5FB00977DE5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91EF7401EF6A5FB00977DE5 /* HomeViewController.swift */; };
 		A91EF7441EF6A5FB00977DE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A91EF7421EF6A5FB00977DE5 /* Main.storyboard */; };
 		A91EF7461EF6A5FB00977DE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A91EF7451EF6A5FB00977DE5 /* Assets.xcassets */; };
 		A91EF7491EF6A5FB00977DE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A91EF7471EF6A5FB00977DE5 /* LaunchScreen.storyboard */; };
 		A91EF7541EF6A5FB00977DE5 /* AmazingCacheSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91EF7531EF6A5FB00977DE5 /* AmazingCacheSampleTests.swift */; };
 		A91EF7671EF6AA0800977DE5 /* AmazingCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A91EF7641EF6A8F400977DE5 /* AmazingCache.framework */; };
 		A91EF7681EF6AA0800977DE5 /* AmazingCache.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A91EF7641EF6A8F400977DE5 /* AmazingCache.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A92241A41EFB8D37001ED521 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92241A31EFB8D37001ED521 /* UIImageView.swift */; };
 		A93167351EFA05F000549C3D /* JSON.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93167341EFA05EF00549C3D /* JSON.xcassets */; };
 		A93167361EFA05F000549C3D /* JSON.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A93167341EFA05EF00549C3D /* JSON.xcassets */; };
 		A93167391EFA0B3300549C3D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A93167381EFA0B3300549C3D /* HomeViewModel.swift */; };
@@ -71,7 +71,6 @@
 /* Begin PBXFileReference section */
 		A91EF73B1EF6A5FB00977DE5 /* AmazingCacheSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmazingCacheSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A91EF73E1EF6A5FB00977DE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A91EF7401EF6A5FB00977DE5 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A91EF7431EF6A5FB00977DE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A91EF7451EF6A5FB00977DE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A91EF7481EF6A5FB00977DE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,6 +79,7 @@
 		A91EF7531EF6A5FB00977DE5 /* AmazingCacheSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmazingCacheSampleTests.swift; sourceTree = "<group>"; };
 		A91EF7551EF6A5FB00977DE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A91EF75E1EF6A8F400977DE5 /* AmazingCache.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AmazingCache.xcodeproj; path = ../AmazingCache.xcodeproj; sourceTree = "<group>"; };
+		A92241A31EFB8D37001ED521 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		A93167341EFA05EF00549C3D /* JSON.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = JSON.xcassets; sourceTree = "<group>"; };
 		A93167381EFA0B3300549C3D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A931673A1EFA12BF00549C3D /* HomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +128,7 @@
 		A91EF73D1EF6A5FB00977DE5 /* AmazingCacheSample */ = {
 			isa = PBXGroup;
 			children = (
+				A92241A11EFB8D13001ED521 /* Extensions */,
 				A931673C1EFA157600549C3D /* Model */,
 				A93167331EFA04F300549C3D /* ViewModel */,
 				A93167321EFA04E200549C3D /* View */,
@@ -154,6 +155,14 @@
 				A91EF7661EF6A8F400977DE5 /* AmazingCacheTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A92241A11EFB8D13001ED521 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A92241A31EFB8D37001ED521 /* UIImageView.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A93167301EFA04CC00549C3D /* Support */ = {
@@ -186,7 +195,6 @@
 		A93167371EFA0AC600549C3D /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				A91EF7401EF6A5FB00977DE5 /* HomeViewController.swift */,
 				A931673A1EFA12BF00549C3D /* HomeCollectionViewController.swift */,
 				A931673F1EFA327000549C3D /* HomeCollectionViewCell.swift */,
 			);
@@ -329,8 +337,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A91EF7411EF6A5FB00977DE5 /* HomeViewController.swift in Sources */,
 				A931673B1EFA12BF00549C3D /* HomeCollectionViewController.swift in Sources */,
+				A92241A41EFB8D37001ED521 /* UIImageView.swift in Sources */,
 				A931673E1EFA15A800549C3D /* Card.swift in Sources */,
 				A93167391EFA0B3300549C3D /* HomeViewModel.swift in Sources */,
 				A91EF73F1EF6A5FB00977DE5 /* AppDelegate.swift in Sources */,

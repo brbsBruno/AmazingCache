@@ -18,7 +18,7 @@ final class MemoryCache {
         didSet {
             if capacity != 0 {
                 while storageIndex.count > capacity {
-                    purgeData()
+                    purgeLeastRecentlyUsed()
                 }
             }
         }
@@ -30,7 +30,7 @@ final class MemoryCache {
     private var storageIndex = NSMutableOrderedSet()
     
     private init() {
-        NotificationCenter.default.addObserver(self, selector: #selector(purgeData), name: .UIApplicationDidReceiveMemoryWarning, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(purgeLeastRecentlyUsed), name: .UIApplicationDidReceiveMemoryWarning, object: nil)
     }
     
     deinit {
@@ -45,7 +45,7 @@ final class MemoryCache {
             storageIndex.add(key)
             
         } else {
-            purgeData()
+            purgeLeastRecentlyUsed()
             setData(data, forKey: key)
         }
     }
@@ -67,7 +67,13 @@ final class MemoryCache {
         storageIndex.remove(key)
     }
     
-    @objc func purgeData() {
+    func removeAll() {
+        while storageIndex.count > 0 {
+            purgeLeastRecentlyUsed()
+        }
+    }
+    
+    @objc func purgeLeastRecentlyUsed() {
         if let lastObject = storageIndex.firstObject as? String {
             removeData(forKey: lastObject)
         }
