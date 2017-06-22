@@ -4,7 +4,7 @@ A simple and lightweight framework to fetch data and cache resources.
 
 ## Features 
 - Ideal for async image loading, but can also be used to improve the access of other types of Data parseable resources as Strings and JSON. 
-- Uses the concept of Least Recently Used (LRU) information to decide with information should be persisted.
+- Uses the concept of Least Recently Used (LRU) information to decide which information should be persisted.
 - Thread safe. Do not block the user interface during networking operations.
 - URLSession and Apple's Frameworks only. No other dependencies. 
 - Size constrained by limiting the number of objects that can be stored.
