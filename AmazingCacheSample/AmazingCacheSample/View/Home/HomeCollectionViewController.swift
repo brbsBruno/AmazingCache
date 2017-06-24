@@ -71,7 +71,7 @@ class HomeCollectionViewController: UICollectionViewController {
         initCards()
     }
     
-    private func loadAnotherPage(_ page: Int) {
+    fileprivate func loadAnotherPage(_ page: Int) {
         let newCards = viewModel.loadCardsAtPage(page)
         
         var indexPathsForNewCards = [IndexPath]()
